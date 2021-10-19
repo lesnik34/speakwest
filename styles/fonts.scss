@@ -1,0 +1,21 @@
+@font-face {
+	font-weight: 400;
+	font-family: "Roboto";
+	font-style: normal;
+	src:
+		local("Roboto"),
+		url("./fonts/roboto-v20-latin-regular.woff2"),
+		url("./fonts/roboto-v20-latin-regular.woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 300;
+	font-family: "Roboto";
+	font-style: normal;
+	src:
+		local("Roboto"),
+		url("./fonts/roboto-v20-latin-300.woff2"),
+		url("./fonts/roboto-v20-latin-300.woff");
+	font-display: swap;
+}
