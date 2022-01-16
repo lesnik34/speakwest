@@ -1,0 +1,98 @@
+@import "../../../styles/variables.scss";
+
+.about {
+    position: relative;
+    z-index: 20;
+    margin-top: 50px;
+    background: linear-gradient(0deg, $background 0px, $background 9%, $catskill-white 9%, $catskill-white calc(100% - 200px), $background calc(100% - 200px), $background 100%);
+
+    @media (min-width: $tablet-width) {
+        background: linear-gradient(0deg, $background 0px, $background 35%, $catskill-white 35%, $catskill-white 83%, $background 83%, $background 100%);
+    }
+
+    @media (min-width: $desktop-width) {
+        margin: 0;
+        background: linear-gradient(0deg, $background 0px, $background 27%, $catskill-white 27%, $catskill-white 79%, $background 79%, $background 100%);
+    }
+}
+
+.about_wrapper {
+    @media (min-width: $desktop-width) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.about_title {
+    margin: 0;
+    font-size: 16px;
+    font-family: $default-font;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: $mine-shaft;
+}
+
+.about_description {
+    padding: 19px 24px;
+    background-color: $alabaster;
+    border-radius: 20px;
+    font-family: $default-font;
+    font-size: 14px;
+    color: $mine-shaft;
+    margin: 0;
+    margin-bottom: 30px;
+    box-shadow: 0px 3px 6px rgba($basic-black, 0.2);
+    max-width: 340px;
+}
+
+.about_lineMobile {
+    width: 100%;
+
+    & .line_one {
+        stroke-dashoffset: 0;
+        animation: line 100s linear infinite;
+    }
+
+    & .line_two {
+        stroke-dashoffset: 0;
+        animation: line 80s linear infinite;
+    }
+}
+
+.about_lineDesktop {
+    width: 100%;
+
+    & .line_one {
+        stroke-dashoffset: 0;
+        animation: line 100s linear infinite;
+    }
+
+    & .line_two {
+        stroke-dashoffset: 0;
+        animation: line 80s linear infinite;
+    }
+}
+
+.about_linesWrapper {
+    position: relative;
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+        top: -80px;
+    }
+
+    @media (min-width: $desktop-width) {
+        top: 0;
+        left: -60px;
+    }
+}
+
+@keyframes line {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -1000;
+    }
+}

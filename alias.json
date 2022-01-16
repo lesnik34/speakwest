@@ -10,7 +10,8 @@
       "@pages/*": ["./pages/*"],
       "@store/*": ["./store/*"],
       "@utils/*": ["./utils/*"],
-      "@api/*": ["./api/*"]
+      "@api/*": ["./api/*"],
+      "@assets/*": ["./assets/*"]
     }
   }
 }

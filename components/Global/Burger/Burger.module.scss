@@ -1,0 +1,192 @@
+@import '../../../styles/variables.scss';
+
+.burger {
+    position: fixed;
+    z-index: 100;
+    border: none;
+    background-color: transparent;
+    padding: 5px 10px;
+    top: 21px;
+    right: 10px;
+}
+
+.burger_line {
+    width: 18px;
+    height: 2px;
+    background-color: $basic-black;
+    margin-bottom: 2px;
+    transition: background-color 300ms 50ms, transform 100ms 100ms;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.menu {
+    position: fixed;
+    z-index: 99;
+    right: -100vw;
+    background-color: $mine-shaft;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px 0 0 10px;
+    padding-top: 55px;
+    transition: right 200ms ease-in-out;
+
+    &.active {
+        right: 0;
+    }
+}
+
+.menu_container {
+    &.anim-enter {
+        & .menu_overlay {
+            transition: background-color 500ms;
+            background-color: rgba($basic-black, .85);
+        }
+
+        & .burger_line.one {
+            animation: lineOne 800ms ease-in-out;
+        }
+
+        & .burger_line.two {
+            animation: lineTwo 800ms ease-in-out;
+        }
+
+        & .burger_line.three {
+            animation: lineThree 800ms ease-in-out;
+        }
+
+        & .menu {
+            animation: menu 800ms ease-in-out;
+        }
+    }
+
+    &.anim-enter-done {
+        & .menu_overlay {
+            background-color: rgba($basic-black, .85);
+        }
+
+        & .burger_line.one {
+            top: 4px;
+            transform: rotate(40deg);
+            background-color: $basic-white;
+        }
+
+        & .burger_line.two {
+            opacity: 0;
+        }
+
+        & .burger_line.three {
+            bottom: 4px;
+            transform: rotate(-40deg);
+            background-color: $basic-white;
+        }
+
+        & .menu {
+            right: 0px;
+        }
+    }
+
+    &.anim-exit {
+        & .menu_overlay {
+            transition: background-color 300ms;
+            background-color: rgba($basic-black, 0);
+        }
+
+        & .burger_line.one {
+            animation: lineOne 800ms ease-in-out alternate-reverse;
+        }
+
+        & .burger_line.two {
+            animation: lineTwo 800ms ease-in-out alternate-reverse;
+        }
+
+        & .burger_line.three {
+            animation: lineThree 800ms ease-in-out alternate-reverse;
+        }
+    }
+
+    &.anim-exit-done {
+        & .menu_overlay {
+            display: none;
+        }
+    }
+}
+
+.menu_overlay {
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 59;
+}
+
+@keyframes lineOne {
+    0% {
+        top: 0;
+        background-color: $basic-black;
+    }
+
+    40% {
+        top: 4px;
+        transform: rotate(0deg);
+        background-color: $basic-black;
+    }
+
+    100% {
+        top: 4px;
+        transform: rotate(40deg);
+        background-color: $basic-white;
+    }
+}
+
+@keyframes lineTwo {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    41% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes lineThree {
+    0% {
+        bottom: 0;
+        background-color: $basic-black;
+    }
+
+    40% {
+        bottom: 4px;
+        transform: rotate(0deg);
+        background-color: $basic-black;
+    }
+
+    100% {
+        bottom: 4px;
+        transform: rotate(-40deg);
+        background-color: $basic-white;
+    }
+}
+
+@keyframes menu {
+    0% {
+        right: -100vw;
+    }
+
+    100% {
+        right: 0;
+    }
+}

@@ -4,18 +4,29 @@
 	font-style: normal;
 	src:
 		local("Roboto"),
-		url("./fonts/roboto-v20-latin-regular.woff2"),
-		url("./fonts/roboto-v20-latin-regular.woff");
+		url("./fonts/Roboto-Regular.woff"),
+		url("./fonts/Roboto-Regular.woff2");
 	font-display: swap;
 }
 
 @font-face {
-	font-weight: 300;
+	font-weight: 500;
 	font-family: "Roboto";
-	font-style: normal;
+	font-style: medium;
 	src:
 		local("Roboto"),
-		url("./fonts/roboto-v20-latin-300.woff2"),
-		url("./fonts/roboto-v20-latin-300.woff");
+		url("./fonts/Roboto-Medium.woff"),
+		url("./fonts/Roboto-Medium.woff2");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 600;
+	font-family: "Roboto";
+	font-style: bold;
+	src:
+		local("Roboto"),
+		url("./fonts/Roboto-Bold.woff"),
+		url("./fonts/Roboto-Bold.woff2");
 	font-display: swap;
 }
