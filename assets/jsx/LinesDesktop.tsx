@@ -144,18 +144,18 @@ const LinesDesktop: React.FC<ILinesDesktop> = ({ className }) => {
       <path
         d="M805.333 18.6002H818V19.2668C818 26.2668 812.333 31.9335 805.333 31.9335"
         stroke="#F9A74E"
-        stroke-width="4"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="4"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M786.667 18.6002H774V19.2668C774 26.2668 779.667 31.9335 786.667 31.9335"
         stroke="#FEC632"
-        stroke-width="4"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="4"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M801.667 41.9333H790.333C786.067 41.9333 782.667 38.5333 782.667 34.2667V13.2667H809.333V34.2667C809.333 38.5333 805.933 41.9333 801.667 41.9333Z"
@@ -165,10 +165,10 @@ const LinesDesktop: React.FC<ILinesDesktop> = ({ className }) => {
         opacity="0.3"
         d="M786.667 15.2667C786.667 15.2667 786.667 26.6 786.667 28.6"
         stroke="white"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M806 13.2667V34.2667C806 38.5333 802.6 41.9333 798.333 41.9333H801.667C805.933 41.9333 809.333 38.5333 809.333 34.2667V13.2667H806Z"
@@ -195,10 +195,10 @@ const LinesDesktop: React.FC<ILinesDesktop> = ({ className }) => {
         opacity="0.3"
         d="M786.667 31.5334V33.0668"
         stroke="white"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M785.933 8.2L786.333 7.2C786.467 6.93333 786.867 6.93333 786.933 7.2L787.333 8.2C787.667 9 788.267 9.59999 789.067 9.93333L790.067 10.3333C790.333 10.4667 790.333 10.8667 790.067 10.9333L789.067 11.3333C788.267 11.6667 787.667 12.2667 787.333 13.0667L786.933 14.0667C786.8 14.3333 786.4 14.3333 786.333 14.0667L785.933 13.0667C785.6 12.2667 785 11.6667 784.2 11.3333L783.2 10.9333C782.933 10.8 782.933 10.4 783.2 10.3333L784.2 9.93333C785 9.59999 785.667 8.93333 785.933 8.2Z"
@@ -211,18 +211,18 @@ const LinesDesktop: React.FC<ILinesDesktop> = ({ className }) => {
       <path
         d="M127 290.5C145.701 275.859 182.708 251.328 228 244.5M317 251C357.871 258.421 406.567 249.288 435.5 244.5M453.5 172.806C437.21 162.991 414.166 156.328 385 156C369.67 155.828 356.001 153.549 344.5 149.813M330.197 82C342.957 75.4746 360.972 70.1512 385 67C392.421 66.0267 399.587 65.2284 406.5 64.5886M498 64.5886C510 65.8924 539.5 79.5 567.5 86M656 86.5C700 79 724.5 69.5 750.5 47.5"
         stroke="#F6903D"
-        stroke-width="4"
-        stroke-dasharray="8 8"
+        strokeWidth="4"
+        strokeDasharray="8 8"
         className={className.lineOne}
       />
       <path
         d="M121 299C139.701 284.359 178.208 262.328 223.5 255.5M323 258.5C363.871 265.921 396.567 260.288 425.5 255.5M445 179.5C427.5 174.5 420.5 168.5 393 165.5C377.759 163.837 347.501 159.236 336 155.5M330 93.5C342.76 86.9746 352.472 81.1512 376.5 78C383.032 77.1433 394.5 75.5 401.5 75.5M497 71C513.5 72 552 90.5 569.5 92M653.5 95C676 92 724.4 78.6 748 51"
         stroke="#332F2C"
-        stroke-width="4"
-        stroke-dasharray="8 8"
+        strokeWidth="4"
+        strokeDasharray="8 8"
         className={className.lineTwo}
       />
-      <g clip-path="url(#clip0_27_579)">
+      <g clipPath="url(#clip0_27_579)">
         <path
           d="M274 277.122C293.882 277.122 310 261.731 310 242.746C310 223.76 293.882 208.369 274 208.369C254.118 208.369 238 223.76 238 242.746C238 261.731 254.118 277.122 274 277.122Z"
           fill="#268FA6"
@@ -360,7 +360,7 @@ const LinesDesktop: React.FC<ILinesDesktop> = ({ className }) => {
         d="M585.066 91.1275C585.071 83.6727 587.936 76.5041 593.071 71.0992C598.205 65.6944 605.217 62.4652 612.662 62.0773C612.15 62.0507 611.645 62 611.127 62C603.402 62 595.994 65.0688 590.531 70.5312C585.069 75.9937 582 83.4024 582 91.1275C582 98.8525 585.069 106.261 590.531 111.724C595.994 117.186 603.402 120.255 611.127 120.255C611.645 120.255 612.151 120.204 612.662 120.177C605.219 119.784 598.21 116.554 593.077 111.15C587.943 105.746 585.077 98.5806 585.066 91.1275V91.1275Z"
         fill="#58565D"
       />
-      <g clip-path="url(#clip1_27_579)">
+      <g clipPath="url(#clip1_27_579)">
         <path
           d="M486 252C505.882 252 522 235.882 522 216C522 196.118 505.882 180 486 180C466.118 180 450 196.118 450 216C450 235.882 466.118 252 486 252Z"
           fill="#268FA6"
@@ -552,8 +552,8 @@ const LinesDesktop: React.FC<ILinesDesktop> = ({ className }) => {
         fill="#0060C4"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M453.501 23C474.211 23 491 39.79 491 60.5007C491 81.2114 474.211 98 453.501 98C432.79 98 416 81.2114 416 60.5007C416 39.79 432.79 23 453.501 23Z"
         fill="#268FA6"
       />
@@ -563,8 +563,8 @@ const LinesDesktop: React.FC<ILinesDesktop> = ({ className }) => {
         fill="#1C3B5C"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M430.565 45.0868L434.659 43.6448L433.732 51.2021L429.851 52.5699L429.7 52.1414L430.565 45.0868ZM439.683 41.8733L443.776 40.4313L442.849 47.9899L438.756 49.4319L439.683 41.8733ZM448.8 38.6611L452.894 37.2178L451.967 44.7764L447.873 46.2184L448.8 38.6611ZM457.917 35.4476L462.011 34.0043L461.084 41.5629L456.992 43.0062L457.917 35.4476ZM467.035 32.2341L471.128 30.7921L470.201 38.3494L466.109 39.7927L467.035 32.2341Z"
         fill="white"
       />
@@ -581,8 +581,8 @@ const LinesDesktop: React.FC<ILinesDesktop> = ({ className }) => {
         fill="#1C3B5C"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M433.164 59.3649H437.503L434.117 52.5438H430.002V52.9983L433.164 59.3649ZM442.83 59.3649H447.17L443.785 52.5438H439.444L442.83 59.3649ZM452.497 59.3649H456.838L453.451 52.5438H449.11L452.497 59.3649ZM462.165 59.3649H466.504L463.118 52.5438H458.778L462.165 59.3649ZM471.831 59.3649H476.172L472.786 52.5438H468.445L471.831 59.3649Z"
         fill="white"
       />

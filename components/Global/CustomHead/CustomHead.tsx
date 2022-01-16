@@ -9,7 +9,7 @@ interface ICustomHead {
 
 const CustomHead: React.FC<ICustomHead> = ({ mainInfo }) => {
   return (
-    <Head itemscope itemtype="http://schema.org/WPHeader">
+    <Head>
       <title key="title" itemProp="headline">
         {mainInfo.siteTitle}
       </title>

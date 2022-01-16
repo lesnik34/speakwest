@@ -27,6 +27,8 @@
   "devDependencies": {
     "@types/node": "^16.7.13",
     "@types/react": "^17.0.20",
+    "@types/react-gtm-module": "^2.0.1",
+    "@types/react-transition-group": "^4.4.4",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
     "eslint": "^7.32.0",
