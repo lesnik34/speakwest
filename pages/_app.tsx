@@ -1,16 +1,32 @@
 import React from "react";
-import { AppProps } from "next/dist/shared/lib/router/router";
+import App from "next/app";
+import { Provider } from "react-redux";
 
-import Layout from "@components/Global/Layout";
+import store from "@store/.";
+import Resize from "@components/Global/Resize";
 
 import "@styles/index.scss";
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
-};
+class MyApp extends App {
+  static getInitialProps = async ({ Component, ctx }: any) => ({
+    pageProps: {
+      ...(Component.getInitialProps
+        ? await Component.getInitialProps(ctx)
+        : {}),
+    },
+  });
+
+  render() {
+    const { Component, pageProps } = this.props;
+
+    return (
+      <Provider store={store}>
+        <Resize />
+
+        <Component {...pageProps} />
+      </Provider>
+    );
+  }
+}
 
 export default MyApp;

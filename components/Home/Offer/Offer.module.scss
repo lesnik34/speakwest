@@ -1,0 +1,17 @@
+@import '../../../styles/variables.scss';
+
+.offer {
+    margin-top: 20px;
+}
+
+.offer_title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: $default-font;
+    color: $mine-shaft;
+}
+
+.offer_programs {
+    margin-top: 10px;
+}
