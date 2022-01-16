@@ -83,18 +83,18 @@ const LinesMobile: React.FC<ILinesMobile> = ({ className }) => {
       <path
         d="M221.08 419.392H230.2V419.872C230.2 424.912 226.12 428.992 221.08 428.992"
         stroke="#F9A74E"
-        stroke-width="4"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="4"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M207.64 419.392H198.52V419.872C198.52 424.912 202.6 428.992 207.64 428.992"
         stroke="#FEC632"
-        stroke-width="4"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="4"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M218.44 436.192H210.28C207.208 436.192 204.76 433.744 204.76 430.672V415.552H223.96V430.672C223.96 433.744 221.512 436.192 218.44 436.192Z"
@@ -104,10 +104,10 @@ const LinesMobile: React.FC<ILinesMobile> = ({ className }) => {
         opacity="0.3"
         d="M207.64 416.992C207.64 416.992 207.64 425.152 207.64 426.592"
         stroke="white"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M221.56 415.552V430.672C221.56 433.744 219.112 436.192 216.04 436.192H218.44C221.512 436.192 223.96 433.744 223.96 430.672V415.552H221.56Z"
@@ -134,10 +134,10 @@ const LinesMobile: React.FC<ILinesMobile> = ({ className }) => {
         opacity="0.3"
         d="M207.64 428.704V429.808"
         stroke="white"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M207.112 411.904L207.4 411.184C207.496 410.992 207.784 410.992 207.832 411.184L208.12 411.904C208.36 412.48 208.792 412.912 209.368 413.152L210.088 413.44C210.28 413.536 210.28 413.824 210.088 413.872L209.368 414.16C208.792 414.4 208.36 414.832 208.12 415.408L207.832 416.128C207.736 416.32 207.448 416.32 207.4 416.128L207.112 415.408C206.872 414.832 206.44 414.4 205.864 414.16L205.144 413.872C204.952 413.776 204.952 413.488 205.144 413.44L205.864 413.152C206.44 412.912 206.92 412.432 207.112 411.904Z"
@@ -189,8 +189,8 @@ const LinesMobile: React.FC<ILinesMobile> = ({ className }) => {
         fill="black"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M257 279C271.912 279 284 291.089 284 306C284 320.912 271.912 333 257 333C242.089 333 230 320.912 230 306C230 291.089 242.089 279 257 279Z"
         fill="#268FA6"
       />
@@ -200,8 +200,8 @@ const LinesMobile: React.FC<ILinesMobile> = ({ className }) => {
         fill="#1C3B5C"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M240.487 294.902L243.434 293.864L242.767 299.305L239.973 300.29L239.864 299.982L240.487 294.902ZM247.051 292.589L249.999 291.551L249.332 296.993L246.384 298.031L247.051 292.589ZM253.616 290.276L256.563 289.237L255.896 294.679L252.948 295.717L253.616 290.276ZM260.18 287.962L263.128 286.923L262.461 292.365L259.514 293.404L260.18 287.962ZM266.745 285.649L269.692 284.61L269.025 290.052L266.078 291.091L266.745 285.649Z"
         fill="white"
       />
@@ -218,8 +218,8 @@ const LinesMobile: React.FC<ILinesMobile> = ({ className }) => {
         fill="#1C3B5C"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M242.358 305.183H245.482L243.044 300.271H240.082V300.599L242.358 305.183ZM249.318 305.183H252.442L250.005 300.271H246.879L249.318 305.183ZM256.278 305.183H259.403L256.965 300.271H253.839L256.278 305.183ZM263.239 305.183H266.363L263.925 300.271H260.8L263.239 305.183ZM270.199 305.183H273.324L270.886 300.271H267.76L270.199 305.183Z"
         fill="white"
       />
@@ -298,7 +298,7 @@ const LinesMobile: React.FC<ILinesMobile> = ({ className }) => {
         d="M92.0813 364.319C93.0152 364.319 93.7724 363.562 93.7724 362.628C93.7724 361.694 93.0152 360.937 92.0813 360.937C91.1473 360.937 90.3901 361.694 90.3901 362.628C90.3901 363.562 91.1473 364.319 92.0813 364.319Z"
         fill="#0060C4"
       />
-      <g clip-path="url(#clip0_119_1008)">
+      <g clipPath="url(#clip0_119_1008)">
         <path
           d="M296.64 205.56C310.955 205.56 322.56 193.955 322.56 179.64C322.56 165.325 310.955 153.72 296.64 153.72C282.325 153.72 270.72 165.325 270.72 179.64C270.72 193.955 282.325 205.56 296.64 205.56Z"
           fill="#268FA6"
@@ -570,15 +570,15 @@ const LinesMobile: React.FC<ILinesMobile> = ({ className }) => {
       <path
         d="M96 263C113.956 286.52 201 274.5 220 298.5M98.5 415.5C113.5 427.5 152.5 433 179 429.5M267 192C245.167 207.667 161.5 160.5 105 200.5M247 75C261.833 84 298.3 118.6 295.5 147M225 321.5C186.5 364.5 155.5 338.5 105 365.5M92 22.5C107.167 21.8333 168.5 26.5 183.5 42"
         stroke="black"
-        stroke-width="3"
-        stroke-dasharray="6 6"
+        strokeWidth="3"
+        strokeDasharray="6 6"
         className={className.lineOne}
       />
       <path
         d="M92 264C109.956 287.52 190.5 281 218.5 298.5M95 417.5C109.5 427.5 143.5 433 172 431.5M266.5 187.5C245 208 172.5 157.5 107 190.5M249 85C263.833 94 293.8 120.1 291 148.5M218.5 321.5C190.5 363.5 148 336 107 359.5M90.5 25.5C112.333 25.8333 158.5 29.5 182.5 48"
         stroke="#F6903D"
-        stroke-width="3"
-        stroke-dasharray="6 6"
+        strokeWidth="3"
+        strokeDasharray="6 6"
         className={className.lineTwo}
       />
       <defs>
