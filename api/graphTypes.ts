@@ -6,6 +6,7 @@ export interface IMainInfo {
   siteKeywords: string;
   siteLogo: { url: string };
   siteFullLogo: { url: string };
+  ogImage: { url: string };
 }
 
 export interface IHeroInfo {
