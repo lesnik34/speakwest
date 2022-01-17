@@ -12,6 +12,10 @@ const Popup = () => {
     (state: RootState) => state.popup,
     shallowEqual
   );
+  const { isMobile } = useSelector(
+    (state: RootState) => state.global,
+    shallowEqual
+  );
   const isPopupVisible = !!id;
   const dispatch = useDispatch();
 
@@ -84,10 +88,12 @@ const Popup = () => {
             </div>
           </div>
 
-          <div
-            className={styles.popup_line}
-            style={{ backgroundColor: color }}
-          />
+          {!isMobile && (
+            <div
+              className={styles.popup_line}
+              style={{ backgroundColor: color }}
+            />
+          )}
         </div>
 
         <div className={styles.popup_overlay} onClick={backHandler} />

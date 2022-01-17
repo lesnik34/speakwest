@@ -51,12 +51,18 @@
 
     & .line_one {
         stroke-dashoffset: 0;
-        animation: line 100s linear infinite;
+
+        @media (min-width: $tablet-width) {
+            animation: line 100s linear infinite;
+        }
     }
 
     & .line_two {
         stroke-dashoffset: 0;
-        animation: line 80s linear infinite;
+        
+        @media (min-width: $tablet-width) {
+            animation: line 80s linear infinite;
+        }
     }
 }
 
