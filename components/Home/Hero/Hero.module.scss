@@ -8,7 +8,7 @@
     position: absolute;
     right: 0;
     top: 10px;
-    width: 57vw;
+    width: calc(100% - 680px);
     height: 542px;
 }
 
@@ -27,7 +27,7 @@
 
     @media (min-width: $desktop-width) {
         align-items: flex-start;
-        padding-top: 160px;
+        padding-top: 120px;
         padding-bottom: 240px;
     }
 }
@@ -36,7 +36,7 @@
     max-width: 335px;
     text-align: center;
     margin: 0;
-    font-size: 45px;
+    font-size: 36px;
     font-family: $default-font;
     font-weight: 600;
     margin-bottom: 15px;
@@ -44,7 +44,7 @@
     @media (min-width: $desktop-width) {
         font-size: 60px;
         text-align: start;
-        max-width: 375px;
+        max-width: 550px;
     }
 }
 
