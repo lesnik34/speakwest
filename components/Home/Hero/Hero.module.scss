@@ -96,7 +96,7 @@
 
 .hero_figure {
     position: absolute;
-    opacity: 0;
+    opacity: 1;
 
     &.purple {
         top: 8.3vh;
@@ -105,11 +105,11 @@
         height: 52px;
         background-color: $hibiscus;
         transform: rotate(30deg);
-        animation: figure_purple 50s ease-in-out forwards infinite;
 
         @media (min-width: $tablet-width) {
             width: 65px;
             height: 65px;
+            animation: figure_purple 50s ease-in-out forwards infinite;
         }
     }
 
@@ -122,12 +122,12 @@
         border-right: 33px solid transparent;
         border-bottom: 56px solid $jaffa-special;
         transform: rotate(-150deg);
-        animation: figure_orange 35s ease-in-out forwards infinite 500ms;
-
+        
         @media (min-width: $tablet-width) {
             border-left: 50px solid transparent;
             border-right: 50px solid transparent;
             border-bottom: 84px solid $jaffa-special;
+            animation: figure_orange 35s ease-in-out forwards infinite 500ms;
         }
     }
 
@@ -138,11 +138,11 @@
         height: 55px;
         background-color: $energy-yellow;
         transform: rotate(-40deg);
-        animation: figure_yellow 45s ease-in-out forwards infinite 1000ms;
-
+        
         @media (min-width: $tablet-width) {
             width: 82px;
             height: 82px;
+            animation: figure_yellow 45s ease-in-out forwards infinite 1000ms;
         }
     }
 
@@ -155,12 +155,12 @@
         border-right: 33px solid transparent;
         border-bottom: 56px solid $amaranth;
         transform: rotate(80deg);
-        animation: figure_red 50s ease-in-out forwards infinite 1500ms;
-
+        
         @media (min-width: $tablet-width) {
             border-left: 50px solid transparent;
             border-right: 50px solid transparent;
             border-bottom: 84px solid $amaranth;
+            animation: figure_red 50s ease-in-out forwards infinite 1500ms;
         }
     }
 
@@ -171,12 +171,16 @@
         background-color: $lochinvar;
         left: 80vw;
         top: 40vh;
-        animation: figure_green 60s ease-in-out forwards infinite 2000ms;
-
+        
         @media (min-width: $tablet-width) {
             width: 135px;
             height: 135px;
+            animation: figure_green 60s ease-in-out forwards infinite 2000ms;
         }
+    }
+
+    @media (min-width: $tablet-width) {
+        opacity: 1;
     }
 }
 

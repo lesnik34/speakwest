@@ -4,6 +4,7 @@ import { shallowEqual, useSelector } from "react-redux";
 
 import { RootState } from "@store/.";
 import styles from "./Hero.module.scss";
+import { scrollPageToPoint } from "@utils/helpers";
 
 interface IHero {
   title: string;
@@ -17,6 +18,11 @@ const Hero: React.FC<IHero> = ({ title, description, image }) => {
     shallowEqual
   );
 
+  const buttonClick = () => {
+    const element = document.querySelector("#offer");
+    scrollPageToPoint(element, 50);
+  };
+
   return (
     <div className={styles.hero}>
       <div className="container">
@@ -25,7 +31,13 @@ const Hero: React.FC<IHero> = ({ title, description, image }) => {
 
           <p className={styles.hero_description}>{description}</p>
 
-          <button className={styles.hero_button}>Подробнее</button>
+          <button
+            className={styles.hero_button}
+            type="button"
+            onClick={buttonClick}
+          >
+            Подробнее
+          </button>
         </div>
       </div>
 

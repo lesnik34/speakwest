@@ -32,6 +32,7 @@
     border: 3px solid rgba($jaffa, 0);
     display: block;
     color: $background;
+    background-color: transparent;
 
     &:hover, &:focus {
         box-shadow: 4px 4px 8px 0px rgba($basic-black, .2);
