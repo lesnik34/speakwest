@@ -29,9 +29,9 @@ const CustomHead: React.FC<ICustomHead> = ({ mainInfo }) => {
 
       <meta property="og:type" content="website" key="ogtype" />
       <meta property="og:title" content={mainInfo.siteTitle} key="ogtitle" />
-      <meta property="og:image" content={mainInfo.siteLogo.url} key="ogimage" />
+      <meta property="og:image" content={mainInfo.ogImage.url} key="ogimage" />
       <meta property="og:url" content={mainInfo.siteDomain} key="ogurl" />
-      <meta property="og:site_name" content="Palatin-a" key="ogsitename" />
+      <meta property="og:site_name" content="Speakwest" key="ogsitename" />
       <meta
         property="og:description"
         content={mainInfo.siteDescription}

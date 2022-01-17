@@ -15,6 +15,7 @@ export const getMainInfo = async () => {
           siteKeywords,
           siteLogo { url },
           siteFullLogo { url },
+          ogImage { url },
         }
     }`
   );
