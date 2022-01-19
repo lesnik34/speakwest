@@ -88,3 +88,26 @@ export const getSchoolInfo = async () => {
 
   return schools;
 };
+
+export const getSliderInfo = async () => {
+  const { sliders } = await graphcms.request(
+    `{
+      sliders(stage: PUBLISHED) {
+        title,
+        description,
+        slides {
+          id,
+          title,
+          subTitle,
+          level,
+          description,
+          icon { url },
+          background { url },
+          image { url },
+        }
+      }
+    }`
+  );
+
+  return sliders[sliders.length - 1];
+};

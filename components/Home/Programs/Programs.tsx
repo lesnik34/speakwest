@@ -25,7 +25,10 @@ const Programs = ({ programs }: { programs: IPrograms[] }) => {
     return (
       <ul className={styles.programs_list}>
         {programs.map((el, i) => (
-          <li className={`${styles.programs_item} ${styleList[i].styles}`}>
+          <li
+            key={el.id}
+            className={`${styles.programs_item} ${styleList[i].styles}`}
+          >
             <button
               className={styles.programs_button}
               onClick={() => clickHandler(el, styleList[i].color)}

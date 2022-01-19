@@ -1,0 +1,106 @@
+@import '../../../../styles/variables.scss';
+
+.mobile_elWrapper {
+    border-radius: 30px;
+    filter: drop-shadow(0px 4px 4px rgba($basic-black, 0.25));
+    padding: 17px;
+    display: flex;
+    flex-direction: column;
+    background-color: $alto;
+}
+
+.mobile_iconWrapper {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    background-color: $background;
+    border-radius: 50%;
+    border: 12px solid $background;
+    margin-right: 13px;
+}
+
+.mobile_description {
+    margin: 0;
+    border-radius: 10px;
+    padding: 17px;
+    padding-top: 11px;
+    background-color: $background;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $default-font;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.mobile_levelWrapper {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.mobile_level {
+    color: $background;
+    font-family: $default-font;
+    font-size: 12px;
+}
+
+.mobile_levelInfo {
+    font-size: 32px;
+    color: $jaffa;
+    font-family: $default-font;
+}
+
+.mobile_wrapper {
+    display: flex;
+    align-items: center;
+
+    & ~ div {
+        border-radius: 30px;
+    }
+}
+
+.mobile_title {
+    font-size: 18px;
+    font-family: $default-font;
+    font-weight: 600;
+    color: $background;
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+.mobile_subTitle {
+    font-size: 16px;
+    font-family: $default-font;
+    color: $alabaster;
+}
+
+.mobile_background {
+    z-index: -1;
+    border-radius: 30px;
+}
+
+.mobile {
+    & :global(.splide__arrow) {
+        top: auto;
+        bottom: -20px;
+
+        & svg {
+            fill: $baltic-sea;
+        }
+
+        & path {
+            stroke-width: 4px;
+            stroke: $mine-shaft;
+            stroke-linejoin: bevel;
+        }
+    }
+
+    & :global(.splide__slide) {
+        margin-bottom: 50px;
+    }
+
+    & :global(.splide__pagination__page.is-active) {
+        background-color: $jaffa;
+    }
+}

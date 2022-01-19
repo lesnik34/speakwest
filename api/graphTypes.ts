@@ -44,3 +44,20 @@ export interface ISchoolInfo {
   logoTitle: { url: string };
   logoFull: { url: string };
 }
+
+export interface ISlideInfo {
+  id: string;
+  title: string;
+  subTitle: string;
+  level: string;
+  description: string;
+  icon: { url: string };
+  background: { url: string };
+  image: { url: string };
+}
+
+export interface ISliderInfo {
+  title: string;
+  description: string;
+  slides: ISlideInfo[];
+}
