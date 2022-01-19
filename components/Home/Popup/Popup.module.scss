@@ -37,6 +37,7 @@
     height: 160px;
     position: relative;
     margin-bottom: 15px;
+    background-color: $alto;
 
     @media (min-width: $desktop-width) {
         margin-right: 40px;
