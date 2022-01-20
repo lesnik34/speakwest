@@ -1,0 +1,216 @@
+@import '../../../styles/variables.scss';
+
+.mailer {
+    margin-top: 75px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: $catskill-white;
+}
+
+.mailer_title {
+    font-size: 16px;
+    font-family: $default-font;
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.mailer_form {
+    background-color: $background;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-shadow: 0px 4px 4px rgba($basic-black, 0.25);
+
+    @media (min-width: $tablet-width) {
+        display: grid;
+        grid-template-columns: 1fr 250px;
+    }
+}
+
+.mailer_email {
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid $jaffa;
+    width: 100%;
+    padding: 3px 12px;
+    font-family: $default-font;
+    font-size: 14px;
+    color: $basic-black;
+    margin-bottom: 25px;
+    outline: none;
+
+    &::placeholder {
+        color: rgba($mine-shaft, .5);
+        font-family: $default-font;
+        font-size: 14px;
+    }
+
+    @media (min-width: $tablet-width) {
+        margin: 0;
+        width: 49%;
+    }
+}
+
+.mailer_tel {
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid $jaffa;
+    width: 100%;
+    padding: 3px 12px;
+    font-family: $default-font;
+    font-size: 14px;
+    color: $basic-black;
+    margin-bottom: 25px;
+    outline: none;
+
+    &::placeholder {
+        color: rgba($mine-shaft, .5);
+        font-family: $default-font;
+        font-size: 14px;
+    }
+
+    @media (min-width: $tablet-width) {
+        margin: 0;
+        width: 49%;
+    }
+}
+
+.mailer_area {
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+    padding: 3px 12px;
+    font-family: $default-font;
+    font-size: 14px;
+    color: $basic-black;
+    resize: none;
+    outline: none;
+
+    &::placeholder {
+        color: rgba($mine-shaft, .5);
+        font-family: $default-font;
+        font-size: 14px;
+    }
+}
+
+.mailer_inputs {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 10px;
+    }
+}
+
+.mailer_button {
+    font-size: 16px;
+    font-family: $default-font;
+    font-weight: 600;
+    padding: 8px 45px;
+    border: 0;
+    border-radius: 5px;
+    color: $background;
+    background-color: $jaffa;
+    cursor: pointer;
+    transition: box-shadow 500ms, transform 300ms;
+
+    &:hover, &:focus {
+        box-shadow: 4px 4px 8px 0px rgba($basic-black, .2);
+        transform: translateY(-3px);
+    }
+
+    &:disabled {
+        background-color: rgba($baltic-sea, .6);
+    }
+}
+
+.mailer_status {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    font-size: 14px;
+    color: rgba($baltic-sea, .6);
+
+    &.error {
+        color: $amaranth;
+    }
+    &.success {
+        color: $eastern-blue;
+    }
+}
+
+.mailer_docs {
+    font-size: 10px;
+    font-family: $default-font;
+    color: rgba($baltic-sea, .3);
+    margin: 0;
+    margin-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    @media (min-width: $tablet-width) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin: 0;
+    }
+}
+
+.mailer_numbers {
+    display: block;
+    text-align: end;
+    font-size: 16px;
+    color: rgba($baltic-sea, .6);
+
+    @media (min-width: $tablet-width) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+}
+
+.mailer_politics {
+    text-decoration: underline;
+}
+
+.mailer_buttons {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    align-items: center;
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-template-columns: 170px 380px 1fr;
+        gap: 10px;
+    }
+}
+
+.mailer_image {
+    margin-bottom: 40px;
+    padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+        padding: 0 20px;
+        margin-bottom: 10px;
+    }
+}
+
+.mailer_icon {
+    width: 100%;
+}
+
+.mailer_inputsMain {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        align-items: center;
+    }
+}
