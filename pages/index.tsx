@@ -22,6 +22,7 @@ import Hero from "@components/Home/Hero";
 import Offer from "@components/Home/Offer";
 import Popup from "@components/Home/Popup";
 import Slider from "@components/Home/Slider";
+import Mailer from "@components/Home/Mailer";
 
 interface IHome {
   fetchedMainInfo: IMainInfo;
@@ -59,6 +60,8 @@ const Home: React.FC<IHome> = ({
       />
 
       <Slider slider={fetchedSliderInfo} />
+
+      <Mailer />
 
       <Popup />
     </Layout>
