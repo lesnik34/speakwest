@@ -1,3 +1,4 @@
+require("dotenv").config({ path: ".env" });
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
@@ -15,8 +16,8 @@ const transporter = nodemailer.createTransport({
   port: 465, // true for 465, false for other ports
   host: "smtp.gmail.com",
   auth: {
-    user: "speakwest.mailer@gmail.com",
-    pass: "&EVM8*Z.m5(&K#j",
+    user: process.env.MAILER,
+    pass: process.env.PASS,
   },
   secure: true,
 });
@@ -24,8 +25,8 @@ const transporter = nodemailer.createTransport({
 app.post("/api/send-email", async (req, res) => {
   const { email, text, tel } = req.body;
   const mailData = {
-    from: "speakwest.mailer@gmail.com",
-    to: "speak.east.russia@gmail.com",
+    from: process.env.MAILER,
+    to: process.env.TO_MAIL,
     subject: "Message from speakwest mailer!",
     text: `Почта отправителя: ${email}. Телефон отправителя: ${tel}. Сообщение отправителя: ${text}`,
   };
