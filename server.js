@@ -39,8 +39,8 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-app.get("/hello", () => {
-  return "Hello world!";
+app.get("/hello", (req, res) => {
+  res.send("Hello world!");
 });
 
 app.use(cors());
