@@ -39,6 +39,10 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
+app.get("/hello", () => {
+  return "Hello world!";
+});
+
 app.use(cors());
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
