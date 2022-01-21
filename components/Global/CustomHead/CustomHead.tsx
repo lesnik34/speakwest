@@ -38,7 +38,7 @@ const CustomHead: React.FC<ICustomHead> = ({ mainInfo }) => {
         key="ogdesc"
       />
 
-      <link rel="manifest" href="fav/manifest.json" />
+      <link rel="manifest" href="fav/site.webmanifest.json" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="robots" content="all" />
       <meta name="msapplication-TileImage" content="fav/ms-icon-144x144.png" />

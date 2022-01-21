@@ -24,7 +24,7 @@ const Header: React.FC<IHeader> = ({ logo }) => {
       <div className="container">
         <div className={styles.header_wrapper}>
           <Link href="/">
-            <a className={styles.header_logoWrapper}>
+            <a className={styles.header_logoWrapper} aria-label="Логотип">
               <div
                 className={styles.header_logo}
                 style={{ backgroundImage: `url("${logo.url}")` }}

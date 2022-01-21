@@ -4,9 +4,15 @@ import Link from "next/link";
 import api from "@api/requests";
 import Mailcon from "@assets/jsx/MailIcon";
 
+import { IMainInfo } from "@api/graphTypes";
+import Contacts from "@components/Home/Contacts";
 import styles from "./Mailer.module.scss";
 
-const Mailer = () => {
+interface IMailer {
+  mainInfo: IMainInfo;
+}
+
+const Mailer: React.FC<IMailer> = ({ mainInfo }) => {
   const [status, setStatus] = useState("await");
   const [email, setEmail] = useState("");
   const [tel, setTel] = useState("");
@@ -38,78 +44,82 @@ const Mailer = () => {
   };
 
   return (
-    <div className={styles.mailer}>
+    <div className={styles.mailer} id="mailer">
       <div className="container">
         <div className={styles.mailer_wrapper}>
           <h2 className={styles.mailer_title}>Остались вопросы?</h2>
 
-          <form onSubmit={submitHandler} className={styles.mailer_form}>
-            <div className={styles.mailer_inputs}>
-              <div className={styles.mailer_inputsMain}>
-                <input
-                  className={styles.mailer_email}
-                  type="email"
-                  placeholder="Email"
-                  required
-                  value={email}
-                  onChange={(e: any) => setEmail(e.target.value)}
-                />
+          <div className={styles.mailer_container}>
+            <form onSubmit={submitHandler} className={styles.mailer_form}>
+              <div className={styles.mailer_inputs}>
+                <div className={styles.mailer_inputsMain}>
+                  <input
+                    className={styles.mailer_email}
+                    type="email"
+                    placeholder="Email"
+                    required
+                    value={email}
+                    onChange={(e: any) => setEmail(e.target.value)}
+                  />
 
-                <input
-                  className={styles.mailer_tel}
-                  type="tel"
-                  placeholder="Телефон"
+                  <input
+                    className={styles.mailer_tel}
+                    type="tel"
+                    placeholder="Телефон"
+                    required
+                    value={tel}
+                    onChange={(e: any) => setTel(e.target.value)}
+                  />
+                </div>
+
+                <textarea
+                  className={styles.mailer_area}
+                  rows={10}
+                  cols={35}
+                  maxLength={200}
                   required
-                  value={tel}
-                  onChange={(e: any) => setTel(e.target.value)}
+                  name="text"
+                  placeholder="Ваше сообщение"
+                  value={text}
+                  onChange={(e: any) => setText(e.target.value)}
                 />
               </div>
 
-              <textarea
-                className={styles.mailer_area}
-                rows={10}
-                cols={35}
-                maxLength={200}
-                required
-                name="text"
-                placeholder="Ваше сообщение"
-                value={text}
-                onChange={(e: any) => setText(e.target.value)}
-              />
-            </div>
+              <div className={styles.mailer_image}>
+                <Mailcon className={styles.mailer_icon} />
+              </div>
 
-            <div className={styles.mailer_image}>
-              <Mailcon className={styles.mailer_icon} />
-            </div>
+              <div className={styles.mailer_buttons}>
+                <span
+                  className={`${styles.mailer_status} ${textStatus[status].class}`}
+                >
+                  {textStatus[status].text}
+                </span>
 
-            <div className={styles.mailer_buttons}>
-              <span
-                className={`${styles.mailer_status} ${textStatus[status].class}`}
-              >
-                {textStatus[status].text}
-              </span>
+                <button
+                  className={styles.mailer_button}
+                  disabled={status !== "await"}
+                >
+                  Отправить
+                </button>
 
-              <button
-                className={styles.mailer_button}
-                disabled={status !== "await"}
-              >
-                Отправить
-              </button>
+                <span
+                  className={styles.mailer_numbers}
+                >{`${text.length}/200`}</span>
 
-              <span
-                className={styles.mailer_numbers}
-              >{`${text.length}/200`}</span>
+                <p className={styles.mailer_docs}>
+                  Нажимая «Отправить», Вы соглашаетесь с
+                  <Link href="/">
+                    <a className={styles.mailer_politics}>
+                      {` политикой обработки персональных данных`}
+                    </a>
+                  </Link>
+                </p>
+              </div>
+            </form>
 
-              <p className={styles.mailer_docs}>
-                Нажимая «Отправить», Вы соглашаетесь с
-                <Link href="/">
-                  <a className={styles.mailer_politics}>
-                    {` политикой обработки персональных данных`}
-                  </a>
-                </Link>
-              </p>
-            </div>
-          </form>
+            <Contacts mainInfo={mainInfo} />
+          </div>
         </div>
       </div>
     </div>

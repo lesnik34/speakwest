@@ -7,6 +7,8 @@ export interface IMainInfo {
   siteLogo: { url: string };
   siteFullLogo: { url: string };
   ogImage: { url: string };
+  phones: { id: string; phone: string }[];
+  medias: { id: string; title: string; link: string }[];
 }
 
 export interface IHeroInfo {

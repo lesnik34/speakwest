@@ -16,6 +16,8 @@ export const getMainInfo = async () => {
           siteLogo { url },
           siteFullLogo { url },
           ogImage { url },
+          phones { id, phone },
+          medias { id, title, link },
         }
     }`
   );

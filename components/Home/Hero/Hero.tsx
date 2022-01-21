@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { shallowEqual, useSelector } from "react-redux";
+import { Link } from "react-scroll";
 
 import { RootState } from "@store/.";
 import styles from "./Hero.module.scss";
@@ -18,11 +19,6 @@ const Hero: React.FC<IHero> = ({ title, description, image }) => {
     shallowEqual
   );
 
-  const buttonClick = () => {
-    const element = document.querySelector("#offer");
-    scrollPageToPoint(element, 50);
-  };
-
   return (
     <div className={styles.hero}>
       <div className="container">
@@ -31,13 +27,16 @@ const Hero: React.FC<IHero> = ({ title, description, image }) => {
 
           <p className={styles.hero_description}>{description}</p>
 
-          <button
+          <Link
             className={styles.hero_button}
-            type="button"
-            onClick={buttonClick}
+            to="offer"
+            spy={true}
+            smooth={true}
+            offset={-10}
+            duration={500}
           >
             Подробнее
-          </button>
+          </Link>
         </div>
       </div>
 
