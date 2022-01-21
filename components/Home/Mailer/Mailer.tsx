@@ -33,8 +33,8 @@ const Mailer = () => {
     }
     setStatus("loading");
 
-    const res = await api.sendEmail({ email, text, tel });
-    setStatus(res.status as string);
+    const { data } = await api.sendEmail({ email, text, tel });
+    setStatus(data.status as string);
   };
 
   return (
