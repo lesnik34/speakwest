@@ -1,31 +1,52 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { scrollPageToPoint } from "@utils/helpers";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { Link } from "react-scroll";
 
-import styles from "./Navigation.module.scss";
 import { toggleBurger } from "@store/slices/global";
+import { RootState } from "@store/.";
+import styles from "./Navigation.module.scss";
 
 const Navigation = () => {
+  const { isBurgerActive } = useSelector(
+    (state: RootState) => state.global,
+    shallowEqual
+  );
   const dispatch = useDispatch();
 
   const buttonClick = () => {
-    const element = document.querySelector("#offer");
-    scrollPageToPoint(element, 50);
-    dispatch(toggleBurger());
+    if (isBurgerActive) {
+      dispatch(toggleBurger());
+    }
   };
 
   return (
     <ul className={styles.navigation}>
       <li className={styles.navigation_item}>
-        <button onClick={buttonClick} className={styles.navigation_link}>
+        <Link
+          className={styles.navigation_link}
+          to="offer"
+          spy={true}
+          smooth={true}
+          offset={-10}
+          duration={500}
+          onClick={buttonClick}
+        >
           Наши программы
-        </button>
+        </Link>
       </li>
 
       <li className={styles.navigation_item}>
-        <a href="" className={`${styles.navigation_link} ${styles.special}`}>
+        <Link
+          className={`${styles.navigation_link} ${styles.special}`}
+          to="mailer"
+          spy={true}
+          smooth={true}
+          offset={-10}
+          duration={500}
+          onClick={buttonClick}
+        >
           Связаться с нами
-        </a>
+        </Link>
       </li>
     </ul>
   );

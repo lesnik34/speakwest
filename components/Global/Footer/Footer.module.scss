@@ -38,6 +38,7 @@
 
     @media (min-width: $desktop-width) {
         grid-template-columns: 1fr 1fr 1fr;
+        width: 300px;
     }
 }
 
@@ -59,8 +60,8 @@
 }
 
 .footer_logo {
-    width: 156px;
-    height: 36px;
+    width: 100px;
+    height: 26px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;

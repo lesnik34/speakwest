@@ -36,12 +36,6 @@ const Slides: React.FC<ISlides> = ({ slides, mode = "small" }) => {
               >
                 <p className={styles.mobile_description}>{el.description}</p>
 
-                <div className={styles.mobile_levelWrapper}>
-                  <span className={styles.mobile_level}>Уровень:</span>
-
-                  <span className={styles.mobile_levelInfo}>{el.level}</span>
-                </div>
-
                 <div className={styles.mobile_wrapper}>
                   <div className={styles.mobile_iconWrapper}>
                     <Image
@@ -50,6 +44,7 @@ const Slides: React.FC<ISlides> = ({ slides, mode = "small" }) => {
                       layout="fill"
                       objectFit="contain"
                       objectPosition="center"
+                      alt="Иконка программы"
                     />
                   </div>
 
@@ -68,6 +63,7 @@ const Slides: React.FC<ISlides> = ({ slides, mode = "small" }) => {
                   layout="fill"
                   objectFit="cover"
                   objectPosition="center"
+                  alt="Фон программы"
                 />
               </div>
             </SplideSlide>

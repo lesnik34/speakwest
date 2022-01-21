@@ -61,7 +61,7 @@ const Home: React.FC<IHome> = ({
 
       <Slider slider={fetchedSliderInfo} />
 
-      <Mailer />
+      <Mailer mainInfo={fetchedMainInfo} />
 
       <Popup />
     </Layout>

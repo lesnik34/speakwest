@@ -17,6 +17,7 @@
     "body-parser": "^1.19.1",
     "concurrently": "^7.0.0",
     "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
     "express": "^4.17.2",
     "graphql": "^16.2.0",
     "graphql-request": "^3.7.0",
@@ -28,6 +29,7 @@
     "react-gtm-module": "^2.0.11",
     "react-redux": "^7.2.5",
     "react-router-dom": "^5.3.0",
+    "react-scroll": "^1.8.4",
     "react-transition-group": "^4.4.2",
     "sass": "^1.39.0"
   },
@@ -35,6 +37,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^17.0.20",
     "@types/react-gtm-module": "^2.0.1",
+    "@types/react-scroll": "^1.8.3",
     "@types/react-transition-group": "^4.4.4",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",

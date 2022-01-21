@@ -17,7 +17,13 @@ const Footer: React.FC<IFooter> = ({ schools, logo }) => {
           <ul className={styles.footer_list}>
             {schools.map((el, i) => (
               <li key={el.id} className={styles.footer_item}>
-                <a href={el.url} target="_blank" className={styles.footer_link}>
+                <a
+                  href={el.url}
+                  target="_blank"
+                  aria-label="Другой проект"
+                  rel="noopener"
+                  className={styles.footer_link}
+                >
                   <div
                     className={styles.footer_logo}
                     style={{ backgroundImage: `url(${el.logoFull.url})` }}
