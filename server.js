@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
 });
 
-app.post("/send-email", async (req, res) => {
+app.post("/api/send-email", async (req, res) => {
   const { email, text, tel } = req.body;
   const mailData = {
     from: "speakwest.mailer@gmail.com",
@@ -39,7 +39,7 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-app.get("/hello", (req, res) => {
+app.get("/api/hello", (req, res) => {
   res.send("Hello world!");
 });
 
