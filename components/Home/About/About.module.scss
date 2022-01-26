@@ -60,7 +60,7 @@
         stroke-dashoffset: 0;
 
         @media (min-width: $tablet-width) {
-            animation: line 100s linear infinite;
+            // animation: line 100s linear infinite;
         }
     }
 
@@ -68,7 +68,7 @@
         stroke-dashoffset: 0;
         
         @media (min-width: $tablet-width) {
-            animation: line 80s linear infinite;
+            // animation: line 80s linear infinite;
         }
     }
 }

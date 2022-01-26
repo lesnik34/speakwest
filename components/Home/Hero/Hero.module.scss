@@ -8,7 +8,7 @@
     position: absolute;
     right: 0;
     top: 10px;
-    width: calc(100% - 680px);
+    width: 50%;
     height: 542px;
 }
 
@@ -109,7 +109,11 @@
         @media (min-width: $tablet-width) {
             width: 65px;
             height: 65px;
-            animation: figure_purple 50s ease-in-out forwards infinite;
+            // animation: figure_purple 50s ease-in-out forwards infinite;
+        }
+
+        @media (min-width: $desktop-width) {
+            opacity: 0;
         }
     }
 
@@ -127,7 +131,11 @@
             border-left: 50px solid transparent;
             border-right: 50px solid transparent;
             border-bottom: 84px solid $jaffa-special;
-            animation: figure_orange 35s ease-in-out forwards infinite 500ms;
+            // animation: figure_orange 35s ease-in-out forwards infinite 500ms;
+        }
+
+        @media (min-width: $desktop-width) {
+            opacity: 0;
         }
     }
 
@@ -142,7 +150,11 @@
         @media (min-width: $tablet-width) {
             width: 82px;
             height: 82px;
-            animation: figure_yellow 45s ease-in-out forwards infinite 1000ms;
+            // animation: figure_yellow 45s ease-in-out forwards infinite 1000ms;
+        }
+
+        @media (min-width: $desktop-width) {
+            opacity: 0;
         }
     }
 
@@ -160,7 +172,11 @@
             border-left: 50px solid transparent;
             border-right: 50px solid transparent;
             border-bottom: 84px solid $amaranth;
-            animation: figure_red 50s ease-in-out forwards infinite 1500ms;
+            // animation: figure_red 50s ease-in-out forwards infinite 1500ms;
+        }
+
+        @media (min-width: $desktop-width) {
+            opacity: 0;
         }
     }
 
@@ -175,7 +191,11 @@
         @media (min-width: $tablet-width) {
             width: 135px;
             height: 135px;
-            animation: figure_green 60s ease-in-out forwards infinite 2000ms;
+            // animation: figure_green 60s ease-in-out forwards infinite 2000ms;
+        }
+
+        @media (min-width: $desktop-width) {
+            opacity: 0;
         }
     }
 
