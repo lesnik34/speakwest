@@ -57,6 +57,7 @@
 .mobile_wrapper {
     display: flex;
     align-items: center;
+    margin-top: 10px;
 
     & ~ div {
         border-radius: 30px;
