@@ -33,7 +33,11 @@ const Contacts: React.FC<IContacts> = ({ mainInfo }) => {
           <ul className={styles.contacts_list}>
             {mainInfo.medias.map((el) => (
               <li key={el.id} className={styles.contacts_item}>
-                <a href={el.link} className={styles.contacts_link}>
+                <a
+                  href={el.link}
+                  className={styles.contacts_link}
+                  target="_blank"
+                >
                   {el.title}
                 </a>
               </li>
