@@ -7,6 +7,7 @@ import {
   getOfferInfo,
   getSchoolInfo,
   getSliderInfo,
+  getStockInfo,
 } from "@api/graph";
 import {
   IMainInfo,
@@ -15,6 +16,7 @@ import {
   IOfferInfo,
   ISchoolInfo,
   ISliderInfo,
+  IStockInfo,
 } from "@api/graphTypes";
 import Layout from "@components/Global/Layout";
 import About from "@components/Home/About";
@@ -23,6 +25,7 @@ import Offer from "@components/Home/Offer";
 import Popup from "@components/Home/Popup";
 import Slider from "@components/Home/Slider";
 import Mailer from "@components/Home/Mailer";
+import Stock from "@components/Home/Stock";
 
 interface IHome {
   fetchedMainInfo: IMainInfo;
@@ -31,6 +34,7 @@ interface IHome {
   fetchedOfferInfo: IOfferInfo;
   fetchedSchoolInfo: ISchoolInfo[];
   fetchedSliderInfo: ISliderInfo;
+  fetchedStockInfo: IStockInfo;
 }
 
 const Home: React.FC<IHome> = ({
@@ -40,6 +44,7 @@ const Home: React.FC<IHome> = ({
   fetchedOfferInfo,
   fetchedSchoolInfo,
   fetchedSliderInfo,
+  fetchedStockInfo,
 }) => {
   return (
     <Layout mainInfo={fetchedMainInfo} schools={fetchedSchoolInfo}>
@@ -63,6 +68,8 @@ const Home: React.FC<IHome> = ({
 
       <Mailer mainInfo={fetchedMainInfo} />
 
+      <Stock stock={fetchedStockInfo} />
+
       <Popup />
     </Layout>
   );
@@ -75,6 +82,7 @@ export async function getStaticProps() {
   const fetchedOfferInfo = await getOfferInfo();
   const fetchedSchoolInfo = await getSchoolInfo();
   const fetchedSliderInfo = await getSliderInfo();
+  const fetchedStockInfo = await getStockInfo();
 
   return {
     props: {
@@ -84,6 +92,7 @@ export async function getStaticProps() {
       fetchedOfferInfo,
       fetchedSchoolInfo,
       fetchedSliderInfo,
+      fetchedStockInfo,
     },
   };
 }

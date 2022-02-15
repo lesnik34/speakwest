@@ -63,3 +63,16 @@ export interface ISliderInfo {
   description: string;
   slides: ISlideInfo[];
 }
+
+export interface IStockInfo {
+  title: string;
+  stocks: IStock[];
+}
+
+export interface IStock {
+  id: string;
+  title: string;
+  description: string;
+  icon: { url: string };
+  colors: { hex: string }[];
+}

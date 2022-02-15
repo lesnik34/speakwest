@@ -1,0 +1,131 @@
+@import '../../../../styles/variables.scss';
+
+.item {
+    & :global(.splide__slide) {
+        margin-bottom: 50px;
+        padding-top: 6px;
+    }
+
+    & :global(.splide__pagination__page.is-active) {
+        background-color: $jaffa;
+    }
+
+    & :global(.splide__arrow) {
+        top: auto;
+        bottom: -20px;
+
+        & svg {
+            fill: $baltic-sea;
+        }
+
+        & path {
+            stroke-width: 4px;
+            stroke: $mine-shaft;
+            stroke-linejoin: bevel;
+        }
+    }
+
+    & button:disabled svg {
+        fill: #B4B4B4;
+    }
+
+    & button:disabled path {
+        stroke: #B4B4B4;
+    }
+}
+
+.item_defWrapper {
+    background-color: rgba($gallery, .5);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 8px 0px rgba($basic-black, .2);
+    height: 100%;
+    border: 1px solid rgba($gallery, .7);
+    transition: box-shadow 500ms, transform 300ms;
+
+    &:hover, &:focus {
+        box-shadow: 4px 4px 8px 0px rgba($basic-black, .4);
+        transform: translateY(-3px);
+    }
+}
+
+.item_defTitle {
+    margin: 0;
+    margin-bottom: 7px;
+    font-size: 18px;
+    font-family: $default-font;
+    font-weight: 500;
+}
+
+.item_defDescription {
+    max-width: 240px;
+    font-size: 14px;
+    font-family: $default-font;
+    text-align: center;
+    margin: 0;
+}
+
+.item_wrapper {
+    padding: 18px 24px;
+    border: 1px solid rgba($alto, .8);
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px 0px rgba($basic-black, .2);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 500ms, transform 300ms;
+    transform: translateY(0px);
+
+    &:hover, &:focus {
+        box-shadow: 4px 4px 8px 0px rgba($basic-black, .4);
+        transform: translateY(-3px);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        transform: rotate(45deg);
+        background-color: $alabaster;
+        width: 200px;
+        height: 180px;
+        left: -77px;
+        top: -10px;
+        z-index: 1;
+    }
+}
+
+.item_title {
+    margin: 0;
+    color: $background;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: $default-font;
+    text-shadow: 0 4px 4px rgba($basic-black, .25);
+    text-align: end;
+    display: block;
+    margin-left: auto;
+    max-width: 205px;
+}
+
+.item_description {
+    margin: 0;
+    color: $background;
+    font-size: 12px;
+    font-family: $default-font;
+    text-align: end;
+    margin-bottom: 65px;
+    margin-left: auto;
+    max-width: 205px;
+}
+
+.item_iconWrapper {
+    position: absolute;
+    left: 32px;
+    width: 87px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 2;
+}
