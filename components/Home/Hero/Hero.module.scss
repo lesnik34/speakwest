@@ -213,39 +213,27 @@
 @keyframes figure_purple {
     0% {
         opacity: 0;
-        top: 8.3vh;
-        left: 2.5vw;
-        transform: rotate(30deg);
+        transform: rotate(30deg) translate3d(2.5vw, 8.3vh, 0);
     }
     7% {
         opacity: 1;
     }
     20% {
-        left: 8vw;
-        top: 2.6vh;
-        transform: rotate(130deg);
+        transform: rotate(130deg) translate3d(8vw, 2.6vh, 0);
     }
     40% {
-        left: 14vw;
-        top: 7vh;
-        transform: rotate(20deg);
+        transform: rotate(20deg) translate3d(14vw, 7vh, 0);
     }
     60% {
-        left: 8.5vw;
-        top: 10.5vh;
-        transform: rotate(-80deg);
+        transform: rotate(-80deg) translate3d(8.5vw, 10.5vh, 0);
     }
     80% {
-        left: 3vw;
-        top: 3vh;
         opacity: 1;
-        transform: rotate(140deg);
+        transform: rotate(140deg) translate3d(3vw, 3vh, 0);
     }
     100% {
         opacity: 0;
-        top: 8.3vh;
-        left: 2.5vw;
-        transform: rotate(30deg);
+        transform: rotate(30deg) translate3d(2.5vw, 8.3vh, 0);
     }
 }
 

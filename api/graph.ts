@@ -113,3 +113,24 @@ export const getSliderInfo = async () => {
 
   return sliders[sliders.length - 1];
 };
+
+export const getStockInfo = async () => {
+  const { stockSections } = await graphcms.request(
+    `{
+      stockSections(stage: PUBLISHED) {
+        title,
+        stocks {
+          id,
+          title,
+          description,
+          icon { url },
+          colors {
+            hex
+          }
+        }
+      }
+    }`
+  );
+
+  return stockSections[stockSections.length - 1];
+};
