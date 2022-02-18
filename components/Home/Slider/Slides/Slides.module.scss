@@ -107,4 +107,8 @@
     & :global(.splide__pagination__page.is-active) {
         background-color: $jaffa;
     }
+
+    & :global(.splide__pagination__page:hover) {
+        background-color: $chestnut-rose;
+    }
 }

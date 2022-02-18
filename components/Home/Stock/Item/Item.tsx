@@ -6,6 +6,7 @@ import { IStock } from "@api/graphTypes";
 import { RootState } from "@store/.";
 
 import styles from "./Item.module.scss";
+import { url } from "inspector";
 
 interface IItem {
   stocks: IStock[];
@@ -51,15 +52,17 @@ const Item: React.FC<IItem> = ({ stocks }) => {
 
                   <span className={styles.item_title}>{el.title}</span>
 
-                  <div className={styles.item_iconWrapper}>
-                    <Image
-                      src={el.icon.url}
-                      layout="fill"
-                      objectFit="contain"
-                      objectPosition="center"
-                      alt="Иконка акции"
-                    />
-                  </div>
+                  {el.icon?.url && (
+                    <div className={styles.item_iconWrapper}>
+                      <Image
+                        src={el.icon.url}
+                        layout="fill"
+                        objectFit="contain"
+                        objectPosition="center"
+                        alt="Иконка акции"
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             </SplideSlide>
