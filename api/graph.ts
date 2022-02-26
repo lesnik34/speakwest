@@ -134,3 +134,21 @@ export const getStockInfo = async () => {
 
   return stockSections[stockSections.length - 1];
 };
+
+export const getAdvantageInfo = async () => {
+  const { advantageSections } = await graphcms.request(
+    `{
+      advantageSections(stage: PUBLISHED) {
+        title,
+        advantages {
+          id,
+          title,
+          description,
+          icon { url }
+        }
+      }
+    }`
+  );
+
+  return advantageSections[advantageSections.length - 1];
+};
