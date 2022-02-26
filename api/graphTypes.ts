@@ -76,3 +76,15 @@ export interface IStock {
   icon: { url: string };
   colors: { hex: string }[];
 }
+
+export interface IAdvantageInfo {
+  title: string;
+  advantages: IAdvantage[];
+}
+
+export interface IAdvantage {
+  id: string;
+  title: string;
+  description: string;
+  icon: { url: string };
+}
