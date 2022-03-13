@@ -77,6 +77,7 @@ const Popup: React.FC<IPopup> = ({ setVisible }) => {
             type="text"
             placeholder="Имя"
             required
+            maxLength={30}
             value={name}
             onChange={(e: any) => setName(e.target.value)}
           />
@@ -85,7 +86,7 @@ const Popup: React.FC<IPopup> = ({ setVisible }) => {
             className={styles.popup_area}
             rows={10}
             cols={35}
-            maxLength={200}
+            maxLength={400}
             required
             name="text"
             placeholder="Ваш отзыв"
