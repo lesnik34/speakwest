@@ -38,6 +38,7 @@ const Item: React.FC<IItem> = ({ stocks }) => {
           gap: "1rem",
           rewind: true,
           perPage: isDesktop ? 3 : 1,
+          padding: { left: 10, right: 10 },
         }}
       >
         {stocks.map((el) => {

@@ -29,13 +29,13 @@ const Hero: React.FC<IHero> = ({ title, description, image }) => {
 
           <Link
             className={styles.hero_button}
-            to="offer"
+            to="mailer"
             spy={true}
             smooth={true}
             offset={-10}
             duration={500}
           >
-            Подробнее
+            Бесплатное занятие
           </Link>
         </div>
       </div>

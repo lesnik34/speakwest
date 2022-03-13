@@ -87,7 +87,7 @@
 .mobile {
     & :global(.splide__arrow) {
         top: auto;
-        bottom: -20px;
+        bottom: -2px;
 
         & svg {
             fill: $baltic-sea;
@@ -110,5 +110,14 @@
 
     & :global(.splide__pagination__page:hover) {
         background-color: $chestnut-rose;
+    }
+
+    & :global(.splide__arrow svg) {
+        width: 1.6em;
+        height: 1.6em;
+    }
+
+    & :global(.splide__pagination) {
+        bottom: 17px;
     }
 }
