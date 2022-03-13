@@ -6,6 +6,7 @@ import {
   getHeroInfo,
   getMainInfo,
   getOfferInfo,
+  getReviewsInfo,
   getSchoolInfo,
   getSliderInfo,
   getStockInfo,
@@ -19,6 +20,7 @@ import {
   ISliderInfo,
   IStockInfo,
   IAdvantageInfo,
+  IReviews,
 } from "@api/graphTypes";
 import Layout from "@components/Global/Layout";
 import About from "@components/Home/About";
@@ -29,6 +31,7 @@ import Slider from "@components/Home/Slider";
 import Mailer from "@components/Home/Mailer";
 import Stock from "@components/Home/Stock";
 import Advantages from "@components/Home/Advantages";
+import Reviews from "@components/Home/Reviews";
 
 interface IHome {
   fetchedMainInfo: IMainInfo;
@@ -39,6 +42,7 @@ interface IHome {
   fetchedSliderInfo: ISliderInfo;
   fetchedStockInfo: IStockInfo;
   fetchedAdvantagesInfo: IAdvantageInfo;
+  fetchedReviewsInfo: IReviews[];
 }
 
 const Home: React.FC<IHome> = ({
@@ -50,6 +54,7 @@ const Home: React.FC<IHome> = ({
   fetchedSliderInfo,
   fetchedStockInfo,
   fetchedAdvantagesInfo,
+  fetchedReviewsInfo,
 }) => {
   return (
     <Layout mainInfo={fetchedMainInfo} schools={fetchedSchoolInfo}>
@@ -58,6 +63,8 @@ const Home: React.FC<IHome> = ({
         description={fetchedHeroInfo.description}
         image={fetchedHeroInfo?.image?.url}
       />
+
+      <Stock stock={fetchedStockInfo} />
 
       <About
         title={fetchedAboutInfo.title}
@@ -78,7 +85,7 @@ const Home: React.FC<IHome> = ({
 
       <Mailer mainInfo={fetchedMainInfo} />
 
-      <Stock stock={fetchedStockInfo} />
+      <Reviews reviews={fetchedReviewsInfo} />
 
       <Popup />
     </Layout>
@@ -94,6 +101,7 @@ export async function getStaticProps() {
   const fetchedSliderInfo = await getSliderInfo();
   const fetchedStockInfo = await getStockInfo();
   const fetchedAdvantagesInfo = await getAdvantageInfo();
+  const fetchedReviewsInfo = await getReviewsInfo();
 
   return {
     props: {
@@ -105,6 +113,7 @@ export async function getStaticProps() {
       fetchedSliderInfo,
       fetchedStockInfo,
       fetchedAdvantagesInfo,
+      fetchedReviewsInfo,
     },
   };
 }

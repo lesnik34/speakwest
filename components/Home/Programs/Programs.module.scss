@@ -178,6 +178,7 @@
     &:hover, &:focus {
         box-shadow: 4px 4px 8px 0px rgba($basic-black, .4);
         transform: translateY(-3px);
+        cursor: pointer;
     }
 }
 

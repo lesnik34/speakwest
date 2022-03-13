@@ -25,6 +25,7 @@ const Slides: React.FC<ISlides> = ({ slides, mode = "small" }) => {
           gap: "1rem",
           rewind: true,
           perPage: isDesktop ? 3 : 1,
+          padding: { left: 10, right: 10 },
         }}
       >
         {slides.map((el) => {

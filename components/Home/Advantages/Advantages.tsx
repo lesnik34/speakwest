@@ -9,7 +9,7 @@ const Advantages: React.FC<IAdvantageInfo> = ({ title, advantages }) => {
     <div className={styles.advantages}>
       <div className="container">
         <div className={styles.advantages_wrapper}>
-          <h2 className={styles.advantages_title}>{title}</h2>
+          {/* <h2 className={styles.advantages_title}>{title}</h2> */}
 
           <ul className={styles.advantages_list}>
             {advantages.map((el) => (

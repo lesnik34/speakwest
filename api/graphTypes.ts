@@ -88,3 +88,18 @@ export interface IAdvantage {
   description: string;
   icon: { url: string };
 }
+
+export interface IReviews {
+  id: string;
+  name: string;
+  review: string;
+  rating: ERating;
+}
+
+export enum ERating {
+  one,
+  two,
+  three,
+  four,
+  five,
+}
