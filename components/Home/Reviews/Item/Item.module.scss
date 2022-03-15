@@ -67,7 +67,9 @@
     margin: 0;
     margin-bottom: 10px;
     font-size: 16px;
+    word-break: break-word;
     font-weight: 400;
+    max-width: 160px;
 }
 
 .item_review {
