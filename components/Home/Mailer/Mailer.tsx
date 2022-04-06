@@ -39,8 +39,8 @@ const Mailer: React.FC<IMailer> = ({ mainInfo }) => {
     }
     setStatus("loading");
 
-    const { data } = await api.sendEmail({ email, text, tel });
-    setStatus(data.status as string);
+    const { status } = await api.sendEmail({ email, text, tel });
+    setStatus(typeof status === "string" ? status : "error");
   };
 
   return (
