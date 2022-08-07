@@ -96,6 +96,11 @@ export interface IReviews {
   rating: ERating;
 }
 
+export interface IVideo {
+  title: string;
+  url: string;
+}
+
 export enum ERating {
   one,
   two,

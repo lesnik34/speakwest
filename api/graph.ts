@@ -49,6 +49,19 @@ export const getHeroInfo = async () => {
   return heroes[heroes.length - 1];
 };
 
+export const getVideo = async () => {
+  const { videos } = await graphcms.request(
+    `{
+        videos(stage: PUBLISHED) {
+          title,
+          url
+        }
+    }`
+  );
+
+  return videos[videos.length - 1];
+};
+
 export const getAboutInfo = async () => {
   const { abouts } = await graphcms.request(
     `{

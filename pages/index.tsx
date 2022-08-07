@@ -10,6 +10,7 @@ import {
   getSchoolInfo,
   getSliderInfo,
   getStockInfo,
+  getVideo,
 } from "@api/graph";
 import {
   IMainInfo,
@@ -21,6 +22,7 @@ import {
   IStockInfo,
   IAdvantageInfo,
   IReviews,
+  IVideo,
 } from "@api/graphTypes";
 import Layout from "@components/Global/Layout";
 import About from "@components/Home/About";
@@ -32,6 +34,7 @@ import Mailer from "@components/Home/Mailer";
 import Stock from "@components/Home/Stock";
 import Advantages from "@components/Home/Advantages";
 import Reviews from "@components/Home/Reviews";
+import Video from "@components/Home/Video";
 
 interface IHome {
   fetchedMainInfo: IMainInfo;
@@ -43,6 +46,7 @@ interface IHome {
   fetchedStockInfo: IStockInfo;
   fetchedAdvantagesInfo: IAdvantageInfo;
   fetchedReviewsInfo: IReviews[];
+  fetchedVideo: IVideo;
 }
 
 const Home: React.FC<IHome> = ({
@@ -55,6 +59,7 @@ const Home: React.FC<IHome> = ({
   fetchedStockInfo,
   fetchedAdvantagesInfo,
   fetchedReviewsInfo,
+  fetchedVideo,
 }) => {
   return (
     <Layout mainInfo={fetchedMainInfo} schools={fetchedSchoolInfo}>
@@ -70,6 +75,8 @@ const Home: React.FC<IHome> = ({
         title={fetchedAboutInfo.title}
         description={fetchedAboutInfo.description}
       />
+
+      <Video title={fetchedVideo.title} url={fetchedVideo.url} />
 
       <Advantages
         title={fetchedAdvantagesInfo.title}
@@ -102,8 +109,10 @@ export async function getStaticProps() {
   const fetchedStockInfo = await getStockInfo();
   const fetchedAdvantagesInfo = await getAdvantageInfo();
   const fetchedReviewsInfo = await getReviewsInfo();
+  const fetchedVideo = await getVideo();
 
   return {
+    revalidate: 1,
     props: {
       fetchedMainInfo,
       fetchedHeroInfo,
@@ -114,6 +123,7 @@ export async function getStaticProps() {
       fetchedStockInfo,
       fetchedAdvantagesInfo,
       fetchedReviewsInfo,
+      fetchedVideo,
     },
   };
 }
